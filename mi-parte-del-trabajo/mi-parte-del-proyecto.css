@@ -54,7 +54,7 @@ div a{
 }
 
 body{
-    background-color: lightblue;
+    background-color: white;
 }
 
 
@@ -105,4 +105,25 @@ body{
     justify-content:center;
     align-items: center;
 
+    border: 5px solid;
+    border-color: brown;
+    margin-top: 10%;
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-bottom: 25%;
+
+}
+
+.imgpoke{
+    border: 3px solid;
+}
+
+.imgystats{
+
+    margin-top: 0px;
+    padding-right: 46%;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 60%;
 }
