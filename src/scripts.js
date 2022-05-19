@@ -4,12 +4,14 @@ const URL = "https://pokeapi.co/api/v2/pokemon/"
 //Documento
 const d = document
 
+//Donde se imprimira
+const pokemonContainer = d.querySelector("#container_poke")
+
 //Pintar la data
 const imprimirPokemons = (monster) => {
-        const col = d.createElement("div")
-        col.classList.add("col-lg-3", "col-md-4", "col-sm-6", "my-2")
-        const pokemonContainer = d.createElement("div")
-        const cardContainer = d.createElement("div")
+
+        const cardContainer = document.createElement("div")
+    
         let cardBody = d.createElement("div")
         let name = d.createElement("p")
         let pokeID = d.createElement("p")
@@ -24,12 +26,11 @@ const imprimirPokemons = (monster) => {
         const listAbilities = abilities1or2(monster)
         const listTypes = types1or2(monster)
         
-        console.log(pokemonContainer)
+        console.log(cardContainer)
 
-        pokemonContainer.appendChild(col)
-        col.appendChild(cardContainer)
-        imgContainer.appendChild(imgPokemon)    
-        cardContainer.appendChild(imgContainer)
+        pokemonContainer.appendChild(cardContainer)
+        cardContainer.appendChild(imgContainer)    
+        imgContainer.appendChild(imgPokemon)
         cardContainer.appendChild(cardBody)
         cardBody.append(pokeID, name, listTypes, weight, listAbilities)
 }
@@ -37,9 +38,10 @@ const imprimirPokemons = (monster) => {
 //Habilidades del pokemon
 const abilities1or2 = (monster) => {
     let abilities = d.createElement("ul")
+    abilities.innerText = `Especial ability(s):`
     monster.abilities.forEach(element => {
         let habilidad = d.createElement("li")
-        habilidad.innerText = `Especial ability(s): ${element.ability.name}`
+        habilidad.innerText = element.ability.name
         abilities.appendChild(habilidad)
     });
     return abilities
@@ -48,9 +50,10 @@ const abilities1or2 = (monster) => {
 //Tipos del pokemon
 const types1or2 = (monster) => {
     let type = d.createElement("ul")
+    type.innerText = `Type(s):`
     monster.types.forEach(element => {
         let tipo = d.createElement("li")
-        tipo.innerText = `Type(s): ${element.type.name}`
+        tipo.innerText = element.type.name
         type.appendChild(tipo)
     });
     return type
