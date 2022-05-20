@@ -1,0 +1,108 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    display: flex;
+    min-height: 100px;
+    background-color: coral;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 65px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+@media (max-width: 500px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+div a{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 30px;
+
+}
+
+body{
+    background-color: lightblue;
+}
+
+
+.busqueda{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.busqueda input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: blueviolet;
+    width: 1px;
+    height: 1px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.busqueda:hover input{
+    width: 240px;
+}
+
+.busqueda input:focus{
+    width: 240px;
+}
+
+.pokemons{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+}
